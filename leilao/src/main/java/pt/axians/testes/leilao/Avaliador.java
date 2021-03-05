@@ -19,7 +19,12 @@ public class Avaliador {
 			total += licitacao.getMontante();
 		}
 		
-		valorMedio  = total/leilao.getLicitacoes().size();
+		int numLicitacoes = leilao.getLicitacoes().size();
+		if(numLicitacoes == 0) {
+			valorMedio = 0.0;
+			return;
+		}
+		valorMedio  = total/numLicitacoes;
 	}
 	
 	public double getMaiorDeTodos() {
