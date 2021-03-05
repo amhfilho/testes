@@ -35,5 +35,15 @@ public class TesteAvaliador {
 		
 		Assert.assertEquals(400.00, avaliador.getValorMedio(), 0.0001);
 	}
+	
+	@Test
+	public void verificaValorMedioComZeroLicitacoes() {
+		Leilao leilao = new Leilao("XBox One");
+		Avaliador avaliador = new Avaliador();
+		
+		avaliador.avalia(leilao);
+		
+		Assert.assertEquals(0.00, avaliador.getValorMedio(), 0.0001);
+	}
 
 }
