@@ -10,7 +10,7 @@ public class Avaliador {
 			if(licitacao.getMontante() > maiorDeTodos) {
 				maiorDeTodos = licitacao.getMontante();
 			}
-			else if(licitacao.getMontante() < menorDeTodos ) {
+			if(licitacao.getMontante() < menorDeTodos ) {
 				menorDeTodos = licitacao.getMontante();
 			}
 		}
