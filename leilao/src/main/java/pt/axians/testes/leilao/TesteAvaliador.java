@@ -13,7 +13,9 @@ public class TesteAvaliador {
 		avaliador.avalia(leilao);
 		
 		double maior = avaliador.getMaiorDeTodos();
-		System.out.println(maior);
+		double menor = avaliador.getMenorDeTodos();
+		System.out.println("Menor valor deve ser 300: " + (menor==300));
+		System.out.println("Maior valor deve ser 500: " + (maior==500));
 	}
 
 }
