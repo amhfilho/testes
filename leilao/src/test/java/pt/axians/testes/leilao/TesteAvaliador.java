@@ -1,8 +1,12 @@
 package pt.axians.testes.leilao;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class TesteAvaliador {
 
-	public static void main(String[] args) {
+	@Test
+	public void verificaMaiorEMenor() {
 		Leilao leilao = new Leilao("XBox One");
 		
 		leilao.licitar(new Licitacao(new Utilizador("Eliseu"), 300.0));
@@ -14,8 +18,8 @@ public class TesteAvaliador {
 		
 		double maior = avaliador.getMaiorDeTodos();
 		double menor = avaliador.getMenorDeTodos();
-		System.out.println("Menor valor deve ser 300: " + (menor==300));
-		System.out.println("Maior valor deve ser 500: " + (maior==500));
+		Assert.assertEquals(300.0, menor, 0.0001);
+		Assert.assertEquals(500.0, maior, 0.0001);
 	}
 
 }
